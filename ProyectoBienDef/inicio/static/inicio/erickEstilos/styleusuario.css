@@ -1,0 +1,117 @@
+.container4 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture-container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-fields3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profile-fields3 p, .profile-fields3 input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    
+}
+
+.button-container a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none; /* Elimina el subrayado */
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.form-group .error {
+    color: red;
+    font-size: 12px;
+}
+
+.form-text {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+
+.button-container a.button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .profile-fields3  {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (max-width: 768px) {
+     p {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button[type="button"], button[type="submit"] {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button[type="button"]:hover, button[type="submit"]:hover {
+    background-color: #45a049;
+}

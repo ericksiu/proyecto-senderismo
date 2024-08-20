@@ -1,0 +1,51 @@
+{% extends "inicio/encabezado.html" %} 
+{%block titulo%}Formulario Tours{%endblock%}
+{% block contenido %}
+{% csrf_token %}
+{%load static%}
+
+<section class="contact_section layout_padding">
+<div class="container">
+ 
+  <div class="custom_heading-container">
+    <h2>
+     Haz tu reserva
+    </h2>
+  </div>
+  <div class="container layout_padding2-top">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <form action="">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="Personas">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="Apellidos">
+            </div>
+            <div class="form-group col-md-6">
+                <input type="int" class="form-control" placeholder="Telefono">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="int" class="form-control" placeholder="Edad">
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" id="datePicker" class="form-control" placeholder="Selecciona una fecha">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<div class="form-group col-12 d-flex justify-content-center">
+      <a class="btn btn-primary mt-1" href="{%url 'datosPago' %}">Continuar</a>
+</div>
+</section>
+  {% endblock %}
