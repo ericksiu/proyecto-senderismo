@@ -1,0 +1,33 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo %}Perfil{% endblock %}
+{% block contenido %}
+{% load static %}
+
+<div class="container4">
+  <h2>Perfil</h2>
+  <div class="profile-picture-container3">
+    {% if usuario.imagen %}
+      <img id="profilePicture" src="{{ usuario.imagen.url }}" alt="Foto de perfil" class="profile-picture">
+    {% else %}
+      <div class="default-profile">
+        <p>Foto de perfil</p>
+      </div>
+    {% endif %}
+  </div>
+  <div class="profile-fields3">
+    {% csrf_token %}
+    <p>Nombre: {{ usuario.nombre }}</p>
+    <p>Apellidos: {{ usuario.apellidos }}</p>
+    <p>Teléfono: {{ usuario.telefono }}</p>
+    <p>Correo: {{ usuario.email }}</p>
+    <p>Ciudad: {{ usuario.ciudad }}</p>
+    <p>Estado: {{ usuario.estado }}</p>
+    <p>Número de Cuenta: {{ usuario.tarjeta }}</p>
+    <p>CVV: {{ usuario.cvv }}</p>
+    <p>Fecha de Caducidad: {{ usuario.caducidad }}</p>
+  </div>
+  <a href="{% url 'Editar Perfil' %}"><button type="button">Editar Perfil</button></a>
+  <a href="{% url 'logout' %}"><button type="button">Cerrar sesión</button></a>
+</div>
+
+{% endblock %}
